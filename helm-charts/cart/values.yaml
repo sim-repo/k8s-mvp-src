@@ -6,3 +6,5 @@ redis:
   cluster:
     enabled: false
   usePassword: false
+  global:
+    storageClass: standard
