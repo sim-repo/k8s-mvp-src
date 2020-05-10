@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: adservice
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: adservice
+    release: {{ .Release.Name }}
+spec:
+  type: ClusterIP
+  selector:
+    app: adservice
+    release: {{ .Release.Name }}
+  ports:
+  - name: grpc
+    port: 9555
+    targetPort: 9555

@@ -1,0 +1,7 @@
+namespace: default
+image:
+  repository: neogeowild/frontendservice
+  tag: latest
+ingress:
+  host: 35.225.193.210.xip.io
+environment: develop

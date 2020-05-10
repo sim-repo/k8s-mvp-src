@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+    name: frontend
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: frontend
+        release: {{ .Release.Name }}
+spec:
+    selector:
+        istio: ingressgateway # use Istio default gateway implementation
+        release: {{ .Release.Name }}
+    servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "*"

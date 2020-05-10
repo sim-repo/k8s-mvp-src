@@ -1,0 +1,4 @@
+namespace: default
+image:
+  repository: neogeowild/currencyservice
+  tag: latest

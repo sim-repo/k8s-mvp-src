@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: recommendationservice
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: recommendationservice
+    release: {{ .Release.Name }}
+spec:
+  type: ClusterIP
+  selector:
+    app: recommendationservice
+    release: {{ .Release.Name }}
+  ports:
+  - name: grpc
+    port: 8080
+    targetPort: 8080

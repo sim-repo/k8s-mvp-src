@@ -1,0 +1,4 @@
+namespace: default
+image:
+  repository: neogeowild/recommendationservice
+  tag: latest

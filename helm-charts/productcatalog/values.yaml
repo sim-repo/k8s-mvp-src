@@ -1,0 +1,4 @@
+namespace: default
+image:
+  repository: neogeowild/productcatalogservice
+  tag: latest
