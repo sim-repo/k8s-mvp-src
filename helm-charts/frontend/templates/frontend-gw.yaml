@@ -9,7 +9,6 @@ metadata:
 spec:
     selector:
         istio: ingressgateway # use Istio default gateway implementation
-        release: {{ .Release.Name }}
     servers:
     - port:
         number: 80
