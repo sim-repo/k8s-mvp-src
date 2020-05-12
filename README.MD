@@ -5,7 +5,7 @@ helm repo index .
 docker image prune --all
 
 helm upgrade --dry-run --debug --install some ./cart
-
+helm install --dry-run route ./routes
 
 kubectl get gateway -n prod
 
