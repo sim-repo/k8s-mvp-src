@@ -8,7 +8,7 @@ metadata:
         release: {{ .Release.Name }}
 spec:
     hosts:
-    - {{ .Values.host }}
+    - {{ .Values.ingress.host }}
     gateways:
     - frontend
     http:
