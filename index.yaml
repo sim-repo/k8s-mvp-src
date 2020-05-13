@@ -3,7 +3,7 @@ entries:
   ad:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.265649+03:00"
+    created: "2020-05-13T22:09:51.018217+03:00"
     description: A Helm chart for Kubernetes
     digest: a9a08a06a38f1cb53810fad95bb54f46e856385640e2a0c347e5b128613c34b4
     name: ad
@@ -14,7 +14,7 @@ entries:
   cart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.279027+03:00"
+    created: "2020-05-13T22:09:51.021396+03:00"
     dependencies:
     - name: redis
       repository: https://kubernetes-charts.storage.googleapis.com/
@@ -29,7 +29,7 @@ entries:
   checkout:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.279667+03:00"
+    created: "2020-05-13T22:09:51.021625+03:00"
     description: A Helm chart for Kubernetes
     digest: 3537a00154c6585a816af34fa80204d05f3721524ee4e4f98603629ea1964abe
     name: checkout
@@ -40,7 +40,7 @@ entries:
   currency:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.280142+03:00"
+    created: "2020-05-13T22:09:51.02185+03:00"
     description: A Helm chart for Kubernetes
     digest: a1bf0cd51af785f1ae08233de7ebf21ceb8206eba17b2aa70b17291c9f6cea5f
     name: currency
@@ -51,7 +51,7 @@ entries:
   email:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.280525+03:00"
+    created: "2020-05-13T22:09:51.022089+03:00"
     description: A Helm chart for Kubernetes
     digest: eaabb5bfd452f2c451210046dc58997e19cdfe47bf77f18b5149369cd57df9c3
     name: email
@@ -62,7 +62,7 @@ entries:
   frontend:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.292408+03:00"
+    created: "2020-05-13T22:09:51.022347+03:00"
     description: A Helm chart for Kubernetes
     digest: cf2f946ff413500322c8bbede1dd01950d720477d5164ddb67820c5f4108137a
     name: frontend
@@ -72,7 +72,7 @@ entries:
     version: 0.21.0
   grafana-load-dashboards:
   - apiVersion: v1
-    created: "2020-05-13T15:43:57.293112+03:00"
+    created: "2020-05-13T22:09:51.022635+03:00"
     digest: cea9d585847357710b5c71798ecbde87f2728f314de09af6d72ccc73d3a1be56
     home: https://github.com/express42/helm-charts/
     maintainers:
@@ -85,9 +85,9 @@ entries:
   istio-vservices:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.293311+03:00"
+    created: "2020-05-13T22:09:51.022857+03:00"
     description: A Helm chart for Kubernetes
-    digest: bbdcdca507e7208bd6dd10611400406beb68ad769635b94561c2b4b5dedf8b6e
+    digest: eba8b52da8cf8856d71472b9c4534a1ee6d5973dbaa8d30d93c736668796f1ea
     name: istio-vservices
     type: application
     urls:
@@ -96,7 +96,7 @@ entries:
   loadgenerator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.293807+03:00"
+    created: "2020-05-13T22:09:51.023047+03:00"
     description: A Helm chart for Kubernetes
     digest: 34e01a151fd248b61f9058b1c75615cd59cbf70adc625342b2acfd96eb4db655
     name: loadgenerator
@@ -107,7 +107,7 @@ entries:
   payment:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.294313+03:00"
+    created: "2020-05-13T22:09:51.023258+03:00"
     description: A Helm chart for Kubernetes
     digest: 91ad1f9ddae4c61503c38259d476f34a66c84b1d5b087526801eb02337925fcb
     name: payment
@@ -118,7 +118,7 @@ entries:
   productcatalog:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.294787+03:00"
+    created: "2020-05-13T22:09:51.023456+03:00"
     description: A Helm chart for Kubernetes
     digest: 07f2aca81b52c42a425fa375996e20ad8fc54e4eb54de8a80fe28238d34f2a4a
     name: productcatalog
@@ -129,7 +129,7 @@ entries:
   recommendation:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.295425+03:00"
+    created: "2020-05-13T22:09:51.023653+03:00"
     description: A Helm chart for Kubernetes
     digest: dd782663cae5973c2c4b189cf54b39847376a8c3249bf3228193a6e313ebab70
     name: recommendation
@@ -140,7 +140,7 @@ entries:
   routes:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.309167+03:00"
+    created: "2020-05-13T22:09:51.023831+03:00"
     description: A Helm chart for Kubernetes
     digest: 773d5837bdfce98e7309ee700839887f36b80c8cd6b807de8d077cad8831230d
     name: routes
@@ -151,7 +151,7 @@ entries:
   shipping:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-13T15:43:57.309671+03:00"
+    created: "2020-05-13T22:09:51.024028+03:00"
     description: A Helm chart for Kubernetes
     digest: 674d5ae3c32d27111f27a813dec3b639bdbd8f77317aaf58499e6bb6ec565e57
     name: shipping
@@ -159,4 +159,4 @@ entries:
     urls:
     - shipping-0.3.0.tgz
     version: 0.3.0
-generated: "2020-05-13T15:43:57.258005+03:00"
+generated: "2020-05-13T22:09:51.017835+03:00"
