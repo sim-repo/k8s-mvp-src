@@ -1,18 +1,18 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-    name: grafana
+    name: kiali
     namespace: istio-system
     labels:
-        app: grafana
+        app: kiali
 spec:
     hosts:
-    - {{ .Values.grafana }}
+    - {{ .Values.kiali }}
     gateways:
-    - grafana
+    - kiali
     http:
         - route:
             - destination:
-                host: grafana
+                host: kiali
                 port:
-                    number: 3000
+                    number: 20001

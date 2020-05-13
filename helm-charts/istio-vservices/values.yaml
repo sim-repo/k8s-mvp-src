@@ -1,2 +1,2 @@
-ingress:
-  host: 35.225.193.210.xip.io
+grafana: 35.225.193.210.xip.io
+kiali: 35.225.193.210.xip.io
