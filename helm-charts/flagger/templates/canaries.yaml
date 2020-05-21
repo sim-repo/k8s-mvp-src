@@ -1,0 +1,135 @@
+---
+apiVersion: flagger.app/v1beta1 
+kind: Canary 
+metadata: 
+    name: frontend 
+    namespace: {{ .Values.namespace }}
+spec: 
+    provider: istio 
+    targetRef: 
+        apiVersion: apps/v1 
+        kind: Deployment 
+        name: frontend 
+    service: 
+        port: 80 
+        targetPort: 8080 
+        gateways: 
+        - frontend 
+        hosts: 
+        - "*" 
+        trafficPolicy: 
+            tls:
+                mode: DISABLE 
+    analysis: 
+        interval: 30s 
+        threshold: 5 
+        maxWeight: 30 
+        stepWeight: 5 
+        metrics:
+          - name: error-rate
+            templateRef:
+              name: error-rate
+              namespace: istio-system
+            thresholdRange:
+              max: 1
+            interval: 30s
+          - name: latency
+            templateRef:
+              name: latency
+              namespace: istio-system
+            thresholdRange:
+              max: 500
+            interval: 30s
+        alerts:
+          - name: "canary-error"
+            severity: error
+            providerRef:
+              name: canary-error
+              namespace: istio-system
+          - name: "canary-warn"
+            severity: warn
+            providerRef:
+              name: canary-warn
+              namespace: istio-system
+          - name: "canary-info"
+            severity: info
+            providerRef:
+              name: canary-info
+              namespace: istio-system
+---
+apiVersion: flagger.app/v1beta1 
+kind: Canary 
+metadata: 
+    name: productcatalog 
+    namespace: {{ .Values.namespace }} 
+spec: 
+    provider: istio 
+    targetRef: 
+        apiVersion: apps/v1 
+        kind: Deployment 
+        name: productcatalogservice
+    service:
+        portName: grpc
+        port: 3550 
+        trafficPolicy: 
+            tls:
+                mode: DISABLE 
+    analysis: 
+        interval: 30s 
+        threshold: 5 
+        maxWeight: 30 
+        stepWeight: 5 
+        metrics:
+            - name: error-rate
+              templateRef:
+                name: error-rate
+                namespace: istio-system
+              thresholdRange:
+                max: 1
+              interval: 30s
+            - name: latency
+              templateRef:
+                name: latency
+                namespace: istio-system
+              thresholdRange:
+                max: 500
+              interval: 30s
+---
+apiVersion: flagger.app/v1beta1 
+kind: Canary 
+metadata: 
+    name: checkout
+    namespace: {{ .Values.namespace }}  
+spec: 
+    provider: istio 
+    targetRef: 
+        apiVersion: apps/v1 
+        kind: Deployment 
+        name: checkoutservice 
+    service:
+      portName: grpc
+      port: 5050
+      trafficPolicy: 
+          tls:
+              mode: DISABLE 
+    analysis: 
+        interval: 30s 
+        threshold: 5 
+        maxWeight: 30 
+        stepWeight: 5 
+        metrics:
+            - name: error-rate
+              templateRef:
+                name: error-rate
+                namespace: istio-system
+              thresholdRange:
+                max: 1
+              interval: 30s
+            - name: latency
+              templateRef:
+                name: latency
+                namespace: istio-system
+              thresholdRange:
+                max: 500
+              interval: 30s
+            
